@@ -1,9 +1,9 @@
-steps:
-# triggers a push to the GCP source repo
-- name: 'gcr.io/cloud-builders/gcloud'
-  id: Trigger source repo push
-  entrypoint: /bin/sh
-  args:
-  - '-c'
-  - |
-    git log google/master
+# steps:
+# # triggers a push to the GCP source repo
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   id: Trigger source repo push
+#   entrypoint: /bin/sh
+#   args:
+#   - '-c'
+#   - |
+#     git log google/master
