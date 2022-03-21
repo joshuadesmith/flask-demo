@@ -6,4 +6,6 @@ steps:
   args:
   - '-c'
   - |
-    git push google --force-with-lease
+    cd ~ && \
+    pwd && \
+    ls
