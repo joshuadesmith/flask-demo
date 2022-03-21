@@ -8,5 +8,6 @@ steps:
   - |
     pwd && \
     ls && \
-    git pull origin main && \
-    git push google main --force-with-lease
+    git add . && \
+    git commit -m "update source repo" && \
+    git push google --force-with-lease
