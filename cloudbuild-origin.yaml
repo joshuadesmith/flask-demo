@@ -6,8 +6,7 @@ steps:
   args:
   - '-c'
   - |
-    pwd && \
-    ls && \
+    git config user.email $(gcloud auth list --filter=status:ACTIVE --format='value(account)') && \
     git add . && \
     git commit -m "update source repo" && \
     git push google --force-with-lease
