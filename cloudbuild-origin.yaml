@@ -6,6 +6,4 @@ steps:
   args:
   - '-c'
   - |
-    cd ~ && \
-    pwd && \
-    ls
+    git log google/master
