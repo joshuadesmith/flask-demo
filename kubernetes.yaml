@@ -18,7 +18,7 @@ spec:
       - name: flask-demo
         image: us-central1-docker.pkg.dev/GOOGLE_CLOUD_PROJECT/gke-demo-repository/flask-demo:COMMIT_SHA
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 5000
+    targetPort: 8080
   type: LoadBalancer

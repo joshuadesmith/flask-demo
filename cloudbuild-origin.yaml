@@ -1,0 +1,10 @@
+steps:
+# triggers a push to the GCP source repo
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: Trigger source repo push
+  args:
+  - '-c'
+  - |
+    cd ~/flask-demo && \
+    git pull origin main && \
+    git push google main --force-with-lease
