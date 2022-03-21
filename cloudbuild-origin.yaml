@@ -8,6 +8,5 @@ steps:
   - |
     pwd && \
     ls && \
-    cd flask-demo && \
     git pull origin main && \
     git push google main --force-with-lease
