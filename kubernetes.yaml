@@ -18,7 +18,7 @@ spec:
       - name: flask-demo
         image: us-central1-docker.pkg.dev/GOOGLE_CLOUD_PROJECT/gke-demo-repository/flask-demo:COMMIT_SHA
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
 ---
 kind: Service
 apiVersion: v1
