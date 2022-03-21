@@ -1,0 +1,18 @@
+# Note: PROJECT_ID and SHORT_SHA variables are automatically populated by Cloud Build
+steps:
+
+# builds the container image
+- name: 'gcr.io/cloud-builders/docker'
+  id: Build
+  args:
+  - 'build'
+  - '-t'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/gke-demo-repository/flask-demo:$SHORT_SHA'
+  - '.'
+
+# pushes the image to artifact registry
+- name: 'gcr.io/cloud-builders/docker'
+  id: Push
+  args:
+  - 'push'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/gke-demo-repository/flask-demo:$SHORT_SHA'
